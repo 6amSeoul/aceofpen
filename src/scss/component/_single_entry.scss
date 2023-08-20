@@ -1,0 +1,364 @@
+$color-post-body-text: #676767;
+$color-post-title-text: #424242;
+$color-accent-blue: #2288f8;
+$color-light-grey: #bebebe;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-intertight: 'Inter Tight', sans-serif;
+$font-urbanist: 'urbanist', sans-serif;
+$font-emoji: 'Noto Emoji';
+
+.content-wrap.single-entry .content-inner-box:first-child {
+    text-align: left;
+}
+
+.single-entry {
+    font-size: 24px;
+    font-weight: 300;
+    color: $color-post-body-text;
+
+    .content-inner-box {
+        padding-top: 100px;
+    }
+
+    // 타이틀
+    .wp-block-post-title {
+        font-family: $font-intertight;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1.2;
+        color: $color-post-title-text;
+
+        a {
+            text-decoration: none;
+            color: $color-post-title-text;
+        }
+    }
+
+    // 태그(링크)
+    .taxonomy-post_tag {
+        margin: 42px 0 5px;
+        font-size: 21px;
+        color: $color-accent-blue;
+
+        a {
+            display: inline-block;
+            font-family: $font-intertight;
+            padding: 1px 0;
+            text-decoration: none;
+            color: $color-accent-blue;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: #d1fffd;
+                }
+            }
+        }
+    }
+
+    // 이미지
+    .wp-block-image {
+        display: block;
+        margin: 50px auto 0;
+        max-width: 70%;
+
+        img {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    // 날짜
+    .post-date>* {
+        display: inline-block;
+        color: $color-light-grey;
+        font-size: 21px;
+    }
+
+    // 카데고리(링크)
+    .taxonomy-category {
+        display: inline-block;
+        margin-left: 8px;
+
+        a {
+            font-family: $font-urbanist;
+            font-size: 21px;
+            font-weight: normal;
+            text-transform: capitalize;
+            color: $color-accent-blue;
+            border-radius: 2px;
+            padding: 6px;
+            text-decoration: none;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: $color-accent-blue;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    // [/g] 'text-bubble' 말풍선스타일
+    .wp-block-group.text-bubble {
+        position: relative;
+        margin: 60px 9% 190px 9%;
+        padding: 50px 37px;
+        font-family: $font-urbanist;
+        font-size: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 300;
+        line-height: 1.8;
+        color: #fcfcfc;
+        background: $color-accent-blue;
+        border-radius: 34px;
+
+        p {
+            margin: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -11px;
+            margin-left: -6px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid $color-accent-blue;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            margin-left: -65px;
+            display: block;
+            width: 130px;
+            height: 130px;
+            background: #f8f8f8;
+            border-radius: 80px;
+            background-size: 130px 130px;
+        }
+
+        &.celebrate:before {
+            background-image: url(./src/img/set-memoji/memoji-celebrate.png);
+        }
+
+        &.dizzy:before {
+            background-image: url(./src/img/set-memoji/memoji-dizzy.png);
+        }
+
+        &.neh:before {
+            background-image: url(./src/img/set-memoji/memoji-neh.png);
+        }
+
+        &.secret:before {
+            background-image: url(./src/img/set-memoji/memoji-secret.png);
+        }
+
+        &.shh:before {
+            background-image: url(./src/img/set-memoji/memoji-shh.png);
+        }
+
+        &.shock:before {
+            background-image: url(./src/img/set-memoji/memoji-shock.png);
+        }
+
+        &.sick:before {
+            background-image: url(./src/img/set-memoji/memoji-sick.png);
+        }
+
+        &.smash:before {
+            background-image: url(./src/img/set-memoji/memoji-smash.png);
+        }
+
+        &.think:before {
+            background-image: url(./src/img/set-memoji/memoji-think.png);
+        }
+
+        &.ugh:before {
+            background-image: url(./src/img/set-memoji/memoji-ugh.png);
+        }
+
+        &.wink:before {
+            background-image: url(./src/img/set-memoji/memoji-wink.png);
+        }
+    }
+
+    // [/g] 'pin-note' 스타일
+    .wp-block-group.pin-note {
+        margin: 50px auto !important;
+        box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.07);
+        border-radius: 40px;
+        color: #474747;
+
+        .wp-block-heading {
+            padding: 30px 7% 28px;
+            margin-top: 0;
+            font-family: $font-urbanist;
+            font-size: 28px;
+            letter-spacing: 0;
+            line-height: 1.6;
+            border-bottom: 1px solid #eaeaea;
+
+            &:before {
+                content: '📌';
+                font-family: $font-emoji;
+                display: inline-block;
+                padding-right: 10px;
+            }
+        }
+
+        p {
+            margin-top: 0;
+            padding: 32px 7% 38px;
+        }
+    }
+}
+
+// 본문글
+.entry-content {
+    margin-bottom: 84px;
+
+    .wp-block-heading {
+        font-family: $font-intertight;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 50px 0 0;
+        color: $color-post-title-text;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        margin-top: 40px;
+    }
+
+    ul {
+        margin-top: 50px;
+        padding: 42px 7% 54px;
+        background: #fbfbfb;
+        box-shadow: 0 0 11px 0 rgba(0, 124, 255, 0.29);
+        border-radius: 40px;
+
+        li~li {
+            margin-top: 13px;
+        }
+    }
+
+    .wp-block-table {
+        margin: 60px 7%;
+    }
+
+    table {
+        font-family: $font-urbanist;
+        font-size: 26px;
+        font-weight: 500;
+        color: $color-accent-blue;
+    }
+}
+
+// 티오씨스타일
+.wp-block-aioseo-table-of-contents {
+    margin: 65px auto !important;
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 40px;
+
+    &+.wp-block-heading {
+        margin-top: 65px;
+    }
+
+    &:before {
+        content: 'Table of Contents';
+        display: block;
+        padding: 30px 7% 28px;
+        font-family: $font-urbanist;
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 1.6;
+        color: $color-post-title-text;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    // 티오씨 목록
+    ul {
+        counter-reset: my-counter;
+        padding: 32px 7% 38px;
+        margin-top: 0; // ul 스타일 리셋
+        background: none; // ul 스타일 리셋
+        box-shadow: none; // ul 스타일 리셋
+        border-radius: 0; // ul 스타일 리셋
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 13px;
+            word-wrap: break-word;
+            font-family: $font-urbanist;
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 1.4;
+            letter-spacing: -0.2px;
+            color: $color-accent-blue;
+
+            &:before {
+                content: counter(my-counter) ".";
+                counter-increment: my-counter;
+                display: inline-block;
+                margin-right: 4px;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: #d1fffd;
+                }
+            }
+        }
+    }
+}
+
+// 인스타/트위터 임베드
+.instagram-media-rendered {
+    margin: 40px auto !important;
+    // padding: 6px !important;
+    width: 70% !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.twitter-tweet-rendered {
+    margin: 40px auto !important;
+    width: 70% !important;
+}
+
+// 네비게이션
+.page-navigation-box {
+    padding: 12px 32px;
+
+    a {
+        display: inline-block;
+        padding: 4px 0;
+        font-size: 19px;
+        font-weight: 300;
+        text-decoration: none;
+        color: #b4b4b4;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: #444;
+                background-color: #d1fffd;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@use "sass:math"; // Import the math module
+// @charset "utf-8";
+
+$map_list: (
+	// Your sprite maps here
+	) !default;
+
+@each $sprite-map in $map_list {
+	$type: map-get($sprite-map, type
+);
+$map_name: map-get($sprite-map, name);
+$image: map-get($sprite-map, image);
+$ratio: map-get($sprite-map, ratio);
+$map_width: math.div(map-get($sprite-map, width), $ratio);
+$map_height: math.div(map-get($sprite-map, height), $ratio);
+
+%#{$map_name}-sprite {
+	background-image: url(#{$image});
+	background-size: ceil($map_width) ceil($map_height);
+	background-repeat: no-repeat;
+}
+}
+
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+}
+
+@mixin get-sprite($filename, $sprite-map, $property: (extend: true, set-offset-x: 0, set-offset-y: 0)) {
+	$map_name: map-get($sprite-map, name);
+	$extend: map-get($property, extend);
+	$set-offset-x: if(map-get($property, 'set-offset-x'), map-get($property, 'set-offset-x'), 0);
+	$set-offset-y: if(map-get($property, 'set-offset-y'), map-get($property, 'set-offset-y'), 0);
+	$offset-x: map-deep-get($sprite-map, 'sprites', $filename, 'offset-x');
+	$offset-y: map-deep-get($sprite-map, 'sprites', $filename, 'offset-y');
+	$width: map-deep-get($sprite-map, 'sprites', $filename, 'width');
+	$height: map-deep-get($sprite-map, 'sprites', $filename, 'height');
+	$ratio: map-get($sprite-map, ratio); // Add this line to get the ratio from the sprite map
+
+	// Adjust the background position calculation
+	$adjusted-offset-x: math.div($offset-x, 2)+$set-offset-x;
+	$adjusted-offset-y: math.div($offset-y, 2)+$set-offset-y;
+
+	@if ($extend ==true) {
+		@extend %#{$map_name}-sprite !optional;
+	}
+
+	background-position: floor($adjusted-offset-x) floor($adjusted-offset-y);
+	background-repeat: no-repeat;
+	width: math.div(ceil($width), $ratio)+$set-offset-x;
+	height: math.div(ceil($height), $ratio)+$set-offset-y;
+}
+
+@mixin get-sprite-background-position($filename, $sprite-map, $property: (set-offset-x: 0, set-offset-y: 0)) {
+	$set-offset-x: if(map-get($property, 'set-offset-x'), map-get($property, 'set-offset-x'), 0);
+	$set-offset-y: if(map-get($property, 'set-offset-y'), map-get($property, 'set-offset-y'), 0);
+	$offset-x: map-deep-get($sprite-map, 'sprites', $filename, 'offset-x');
+	$offset-y: map-deep-get($sprite-map, 'sprites', $filename, 'offset-y');
+
+	background-position: floor($offset-x + $set-offset-x) floor($offset-y + $set-offset-y);
+}
+
+@mixin get-sprite-width($filename, $sprite-map) {
+	$ratio: map-get($sprite-map, ratio);
+	$width: math.div(map-deep-get($sprite-map, 'sprites', $filename, 'width'), $ratio);
+	width: ceil($width);
+}
+
+@mixin get-sprite-height($filename, $sprite-map) {
+	$ratio: map-get($sprite-map, ratio);
+	$height: math.div(map-deep-get($sprite-map, 'sprites', $filename, 'height'), $ratio);
+	height: ceil($height);
+}

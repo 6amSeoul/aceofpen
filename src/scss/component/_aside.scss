@@ -1,0 +1,90 @@
+$color-post-body-text: #676767;
+$color-post-title-text: #424242;
+$color-light-grey: #bebebe;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-librefranklin: "Libre Franklin", sans-serif;
+
+.index-page+.wp-block-template-part {
+    // 구조상 사이드바 겉 박스를 선언할 수밖에
+    min-width: 352px;
+    width: 30%;
+    // background: radial-gradient(circle at center, rgba(123, 107, 188, 0.29) 4%, transparent 70%); 보라색인데 예쁨
+    --red: 123;
+    --green: 107;
+    --blue: 188;
+    --opacity: 0.29;
+    background: radial-gradient(circle at center, rgba(var(--red), var(--green), var(--blue), var(--opacity)) 4%, transparent 70%);
+    overflow: scroll;
+}
+
+.sidebar-wrap {
+    padding: 40px 28px 40px 28px;
+
+    .cat-item {
+        display: inline-block;
+    }
+
+    .cat-item a {
+        display: inline-block;
+        padding: 20px 19px 19px;
+        margin: 5px 5px 0 0;
+        font-family: $font-librefranklin;
+        font-weight: 200;
+        font-size: 21px;
+        border-radius: 50px;
+        background: #fcfcfc;
+        border: 1px solid #ececec;
+        text-decoration: none;
+        color: #7a7a7a;
+        height: 81px;
+        vertical-align: top;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: #fff;
+                border: 1px solid #333333;
+                color: #333333;
+            }
+        }
+    }
+}
+
+.section-heading {
+    display: block;
+    font-family: $font-montserrat;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.7;
+    letter-spacing: -0.5px;
+    padding: 0 0 19px 0;
+    color: #3d3d3d;
+
+    em {
+        font-weight: 500;
+    }
+}
+
+footer {
+    margin-top: 32px;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #b4b4b4;
+    text-transform: lowercase;
+
+    a {
+        display: inline-block;
+        padding: 2px 0;
+        font-size: 19px;
+        font-weight: 300;
+        text-decoration: none;
+        color: #b4b4b4;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: #444;
+                // background-color: #d1fffd;
+            }
+        }
+    }
+}

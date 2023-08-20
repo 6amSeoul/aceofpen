@@ -1,0 +1,121 @@
+$color-post-body-text: #676767;
+$font-intertight: 'Inter Tight', sans-serif;
+
+// 무한스크롤 관련
+.qodef-blog-item {
+    padding-top: 52px;
+
+    &:first-child {
+        padding-top: 42px;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover .qodef-title {
+                background-color: #d1fffd;
+            }
+        }
+    }
+}
+
+.qodef-blog-item-inner {
+    width: 72%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.qodef-media-image {
+    position: relative;
+    width: 40%;
+    /* Set the aspect ratio to 1:1 */
+    padding-top: 40%;
+    overflow: hidden;
+    margin: 0 auto;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.qodef-text {
+    padding-top: 27px;
+}
+
+.qodef-title {
+    font-family: $font-intertight;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.3;
+    color: #4b4b4b;
+}
+
+.qodef-excerpt {
+    padding-top: 18px;
+    color: $color-post-body-text;
+
+    p {
+        display: -webkit-box;
+        overflow: hidden;
+        max-height: 92px;
+        line-height: 1.4;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        word-break: break-word;
+    }
+}
+
+.qodef-info-category a {
+    display: inline-block;
+    font-family: $font-intertight;
+    margin-top: 18px;
+    margin-left: 5px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #dedede;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: #242424;
+            border-color: #474747;
+        }
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.ajax-load-more-wrap .alm-btn-wrap {
+    padding: 44px 0;
+}
+
+// 콘텐츠
+.content-wrap {
+    padding: 26px 0 26px;
+    display: flex;
+    flex-direction: column;
+
+    & .content-inner-box:first-child {
+        text-align: center;
+    }
+}
+
+.content-inner-box {
+    border-radius: 20px;
+    padding: 50px 32px;
+    background: #fff;
+
+    &+& {
+        margin-top: 26px;
+    }
+}

@@ -1,0 +1,31 @@
+$font-intertight: 'Inter Tight', sans-serif;
+
+body>.wp-site-blocks {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    background: #f9f9f9;
+    overflow: scroll;
+
+    &>.content-wrap {
+        flex: 1;
+        flex-basis: 0;
+    }
+}
+
+header.wp-block-template-part {
+    height: 100%;
+}
+
+.wp-site-blocks>*+* {
+    margin-block-start: 0;
+}
+
+.index-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    width: 100%;
+    overflow: scroll;
+}

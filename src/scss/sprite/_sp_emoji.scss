@@ -1,0 +1,40 @@
+// Sprites Map
+$sp_emoji: (
+	name: 'sp_emoji',
+	ratio: 2,
+	width: 1208px,
+	height: 804px,
+	image: 'src/img/sprite/sp_emoji.png',
+	sprites: (
+	face-beaming: (
+			offset-x: 0px,
+			offset-y: 0px,
+			width: 400px,
+			height: 400px,
+		),
+		face-laughing: (
+			offset-x: -404px,
+			offset-y: 0px,
+			width: 400px,
+			height: 400px,
+		),
+		face-rollingeyes: (
+			offset-x: 0px,
+			offset-y: -404px,
+			width: 400px,
+			height: 400px,
+		),
+		face-starstruck: (
+			offset-x: -404px,
+			offset-y: -404px,
+			width: 400px,
+			height: 400px,
+		),
+		face-zany: (
+			offset-x: -808px,
+			offset-y: 0px,
+			width: 400px,
+			height: 400px,
+		),
+	)
+);

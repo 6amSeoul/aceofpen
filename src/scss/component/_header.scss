@@ -1,0 +1,111 @@
+$color-btn-bg: #373737;
+$color-accent-blue: #2288f8;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-intertight: 'Inter Tight', sans-serif;
+
+header.wp-block-template-part {
+  // background: radial-gradient(circle at center, rgba(71, 134, 219, 0.29) 4%, transparent 70%); 파란색인데 예쁨
+  --red: 123;
+  --green: 107;
+  --blue: 188;
+  --opacity: 0.29;
+  background: radial-gradient(circle at center, rgba(var(--red), var(--green), var(--blue), var(--opacity)) 4%, transparent 70%);
+}
+
+.gnb {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.header-wrap {
+  position: relative;
+  padding: 36px 24px 56px;
+
+  .home-btn,
+  .subscribe-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: $color-btn-bg;
+    padding: 20px 40px;
+    border-radius: 60px;
+    color: #fff;
+  }
+}
+
+.home-logo-box {
+  text-align: center;
+}
+
+.home-logo-img {
+  display: block;
+  margin: 0 auto;
+  width: 66px;
+  height: 66px;
+  background-image: url(./src/img/sa-logoicon.svg);
+}
+
+.home-slogan {
+  display: block;
+  margin: 20px auto 6px;
+  width: 204px;
+  height: 24px;
+  background-image: url(./src/img/soganlogotype.png);
+  background-size: 204px 24px;
+  color: transparent;
+  animation: logo-animation 2s infinite alternate cubic-bezier(0.2, 0, 0.4, 1);
+
+  @keyframes logo-animation {
+    0% {
+      transform: scale(1.005);
+    }
+
+    80% {
+      transform: scale(1.025);
+    }
+
+    90% {
+      transform: scale(1.03);
+    }
+
+    100% {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.home-sub-slogan {
+  font-family: $font-intertight;
+  font-size: 19px;
+  color: $color-accent-blue;
+}
+
+.home-menu-box {
+  padding: 0 30px;
+}
+
+.home-menu-box ul li {
+  margin-bottom: 21px;
+}
+
+.home-menu-item {
+  display: block;
+  padding: 0 12px;
+  font-family: $font-montserrat;
+  font-weight: 100;
+  font-size: 52px;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-decoration: none;
+  color: #747474;
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 1), box-shadow 0.5s cubic-bezier(0.2, 0.5, 0.3, 1);
+  backdrop-filter: blur(10px);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      font-weight: 500;
+      color: #2e2e2e;
+      transform: scale(1.04);
+    }
+  }
+}

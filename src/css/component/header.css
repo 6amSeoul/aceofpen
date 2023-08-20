@@ -1,0 +1,135 @@
+.home-menu-item.freebie:before, .home-menu-item.quiz:before, .home-menu-item.archive:before {
+  background-image: url(../img/sprite/sp_header.png);
+  background-size: 55px 54px;
+  background-repeat: no-repeat;
+}
+
+header.wp-block-template-part {
+  --red: 123;
+  --green: 107;
+  --blue: 188;
+  --opacity: 0.29;
+  background: radial-gradient(circle at center, rgba(var(--red), var(--green), var(--blue), var(--opacity)) 4%, transparent 70%);
+}
+
+.gnb {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-wrap {
+  position: relative;
+  padding: 36px 28px 60px;
+  width: 352px;
+}
+.header-wrap .home-btn,
+.header-wrap .subscribe-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #373737;
+  padding: 20px 40px;
+  border-radius: 60px;
+  color: #fff;
+}
+
+.home-logo-box {
+  text-align: center;
+}
+
+.home-logo-img {
+  display: block;
+  margin: 0 auto;
+  width: 66px;
+  height: 66px;
+  background-image: url(../img/sa-logoicon.svg);
+}
+
+.home-slogan {
+  margin: 20px auto 6px;
+  width: 204px;
+  height: 24px;
+  background-image: url(../img/soganlogotype.png);
+  background-size: 204px 24px;
+  color: transparent;
+  animation: logo-animation 3s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes logo-animation {
+  0% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1.005);
+  }
+}
+
+.home-sub-slogan {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  color: #2288f8;
+}
+
+.home-menu-box {
+  padding-left: 30px;
+  width: 352px;
+}
+
+.home-menu-box ul li {
+  display: inline-block;
+  margin-bottom: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 60px;
+  background: #fff;
+}
+
+.home-menu-item {
+  display: inline-block;
+  padding: 20px 25px 20px 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+  font-size: 21px;
+  text-decoration: none;
+  color: #4f4f4f;
+  border-radius: 60px;
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 1), box-shadow 0.5s cubic-bezier(0.2, 0.5, 0.3, 1);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.7));
+}
+.home-menu-item:hover {
+  color: #2e2e2e;
+  transform: scale(1.04);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.home-menu-item:before {
+  content: "";
+  display: inline-block;
+  margin: 8px 10px 0 0;
+  vertical-align: top;
+}
+.home-menu-item.archive:before {
+  width: 26px;
+  height: 26px;
+  background-position: -58px 0px;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+}
+.home-menu-item.quiz:before {
+  width: 27px;
+  height: 27px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+}
+.home-menu-item.freebie:before {
+  width: 25px;
+  height: 25px;
+  background-position: 0px -58px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+/*# sourceMappingURL=header.css.map */

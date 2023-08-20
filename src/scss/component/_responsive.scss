@@ -1,0 +1,326 @@
+$gnb-height: 90px;
+
+/* Media Query for Tablets(Smaller Screens) */
+@media (max-width: 1200px) {
+    // *이 사이즈부터 헤더 숨김 토글
+
+    body>.wp-site-blocks {
+        position: relative;
+    }
+
+    // header area
+    header.wp-block-template-part {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .gnb {
+        display: block;
+        width: 100%;
+    }
+
+    .header-wrap {
+        width: 100%;
+        padding: 0;
+        height: 90px; // $gnb-height 값
+        background: #fff;
+        box-shadow: 0px 0px 11px rgba(216, 216, 216, 0.3);
+        border-bottom: 2px solid rgba(242, 242, 242, 0.45);
+    }
+
+    .home-logo-box {
+        position: relative;
+        padding-top: 15px;
+    }
+
+    .home-logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .home-slogan,
+    .home-sub-slogan {
+        display: none;
+    }
+
+    .home-menu-box {
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 10%;
+        background: #fff;
+        z-index: 10;
+    }
+
+    .home-menu-box ul {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .home-menu-box ul li {
+        margin-left: -12px;
+        margin-bottom: 14px;
+    }
+
+    .home-menu-item {
+        padding: 15px;
+        font-size: 53px;
+        color: #313131;
+        transition: none;
+
+        &:before {
+            content: none;
+        }
+    }
+
+    // 햄버거 menu 버튼
+    .menu-toggle-btn {
+        display: block !important;
+        z-index: 1;
+        position: absolute;
+        top: 22px;
+        left: 14px;
+        width: 50px;
+        height: 50px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        z-index: 11;
+    }
+
+    .menu-toggle-icon {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        height: 2px;
+        margin-top: -2px;
+        right: 0;
+        width: 60%;
+    }
+
+    .menu-toggle-icon::before,
+    .menu-toggle-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+    }
+
+    .menu-toggle-icon::before {
+        top: -10px;
+    }
+
+    .menu-toggle-icon::after {
+        bottom: -10px;
+    }
+
+    .menu-toggle-icon,
+    .menu-toggle-icon::before,
+    .menu-toggle-icon::after {
+        background-color: #373737;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-toggle-btn.is_active .menu-toggle-icon {
+        left: 10%;
+        width: 80%;
+        background-color: transparent;
+        transition: none;
+    }
+
+    .menu-toggle-btn.is_active .menu-toggle-icon::before,
+    .menu-toggle-btn.is_active .menu-toggle-icon::after {
+        top: 50%;
+        margin-top: -2px;
+    }
+
+    .menu-toggle-btn.is_active .menu-toggle-icon::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle-btn.is_active .menu-toggle-icon::after {
+        transform: rotate(-45deg);
+    }
+
+    .menu-toggle-btn.is_active+.home-menu-box {
+        display: table;
+    }
+
+    // 서치
+    // 스크립트로 헤더에 토글 버튼추가함
+    .header-wrap .search-button {
+        right: 0;
+        left: auto;
+        margin: 7px;
+
+        &:before {
+            top: 27%;
+            left: 29%;
+            width: 40%;
+            height: 40%;
+            border-width: 2px;
+        }
+
+        &:after {
+            bottom: 22%;
+            right: 22.5%;
+            width: 24%;
+            height: 2px;
+        }
+    }
+
+    .search-wrap {
+        padding: 46px 53px 36px;
+        background: #fff;
+
+        .search-button {
+            display: none;
+        }
+
+        .wp-block-search__input {
+            padding-left: 20px;
+            border-radius: 0;
+            border-bottom: 1px solid #474747;
+        }
+
+        &.is_focus .delete-icon {
+            right: 64px;
+        }
+    }
+
+    // contents area
+    .index-page,
+    .index-page+.wp-block-template-part {
+        padding-top: $gnb-height;
+    }
+
+    .content-wrap {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .content-inner-box {
+        border-radius: 0;
+
+        &:last-child {
+            margin-top: 0;
+        }
+    }
+
+    .qodef-blog-item-inner {
+        width: auto;
+        padding: 0;
+    }
+
+    // 티오씨스타일
+    .wp-block-aioseo-table-of-contents {
+
+        &:before {
+            font-size: 26px;
+        }
+
+        ul a {
+            font-size: 26px;
+            line-height: 1.2;
+        }
+    }
+
+    .sidebar-wrap {
+        padding-top: 56px;
+    }
+}
+
+/* 특수 */
+@media screen and (max-width: 990px) {
+
+    // 인스타/트위터 임베드
+    .instagram-media-rendered {
+        width: 100% !important;
+    }
+
+    .twitter-tweet-rendered {
+        width: 100% !important;
+    }
+}
+
+/* Media Qeuery for Less Than iPad Mini */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+
+    // *이 사이즈부터 사이드바 아래로 떨어뜨림 원칼럼
+    body>.wp-site-blocks {
+        display: block;
+    }
+
+    .index-page {
+        display: block;
+    }
+
+    // contents area
+    .content-wrap {
+        width: 100%;
+    }
+
+    // aside area
+    .index-page+.wp-block-template-part {
+        min-width: 100%;
+        padding-top: 0;
+    }
+
+    .sidebar-wrap {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        padding: 80px 50px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    // *이 사이즈(모바일)부터 사이드 여백 제거
+
+    .content-wrap {
+        padding: 0;
+
+        .content-inner-box {
+            border-radius: 0;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+
+    // 스크롤 쿼리
+    .qodef-media-image {
+        width: 60%;
+        // padding-top: 60%;
+    }
+
+    .qodef-title {
+        font-size: 29px;
+    }
+
+    // [g/] 'text-bubble' 말풍선스타일
+    .wp-block-group.text-bubble {
+        padding: 20px 27px 20px 27px;
+        margin: 64px 4% 170px 4%;
+        font-size: 22px;
+
+
+        &:before {
+            bottom: -122px;
+            margin-left: -51px;
+            width: 102px;
+            height: 102px;
+            background-size: 102px 102px;
+        }
+    }
+
+    .sidebar-wrap {
+        padding: 70px 24px;
+    }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 132">
+  <rect width="16.76" height="16.76" x="21.74" y="9.82" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 30.12 18.204)"/>
+  <rect width="16.76" height="16.76" x="45.64" y="9.82" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 54.02 18.204)"/>
+  <rect width="16.76" height="16.76" x="69.54" y="9.82" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 77.92 18.204)"/>
+  <rect width="16.76" height="16.76" x="93.43" y="9.82" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 101.82 18.205)"/>
+  <rect width="16.76" height="16.76" x="45.64" y="33.72" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 54.02 42.104)"/>
+  <rect width="16.76" height="16.76" x="69.54" y="33.72" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 77.92 42.104)"/>
+  <rect width="16.76" height="16.76" x="45.64" y="57.62" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 54.02 66.004)"/>
+  <rect width="16.76" height="16.76" x="69.54" y="57.62" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 77.92 66.004)"/>
+  <rect width="16.76" height="16.76" x="45.64" y="81.52" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 54.02 89.904)"/>
+  <rect width="16.76" height="16.76" x="69.54" y="81.52" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 77.92 89.905)"/>
+  <rect width="16.76" height="16.76" x="21.74" y="105.42" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 30.124 113.792)"/>
+  <rect width="16.76" height="16.76" x="45.64" y="105.42" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 54.02 113.804)"/>
+  <rect width="16.76" height="16.76" x="69.54" y="105.42" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 77.92 113.805)"/>
+  <rect width="16.76" height="16.76" x="93.43" y="105.42" rx=".63" ry=".63" style="fill:#282828" transform="rotate(-45 101.807 113.8)"/>
+  <circle cx="121.89" cy="18.12" r="7.8" style="fill:#282828"/>
+  <circle cx="10.11" cy="18.12" r="7.8" style="fill:#282828"/>
+  <circle cx="121.89" cy="113.71" r="7.8" style="fill:#282828"/>
+  <circle cx="10.11" cy="113.71" r="7.8" style="fill:#282828"/>
+  <circle cx="30.15" cy="65.92" r="5.16" style="fill:#282828"/>
+  <circle cx="30.15" cy="42.03" r="5.16" style="fill:#282828"/>
+  <circle cx="30.15" cy="89.82" r="5.16" style="fill:#282828"/>
+  <circle cx="10.23" cy="65.92" r="5.16" style="fill:#282828"/>
+  <circle cx="10.23" cy="42.03" r="5.16" style="fill:#282828"/>
+  <circle cx="10.23" cy="89.82" r="5.16" style="fill:#282828"/>
+  <circle cx="122.01" cy="65.92" r="5.16" style="fill:#282828"/>
+  <circle cx="122.01" cy="42.03" r="5.16" style="fill:#282828"/>
+  <circle cx="122.01" cy="89.82" r="5.16" style="fill:#282828"/>
+  <circle cx="101.84" cy="66.17" r="5.16" style="fill:#282828"/>
+  <circle cx="101.84" cy="42.03" r="5.16" style="fill:#282828"/>
+  <circle cx="101.84" cy="89.82" r="5.16" style="fill:#282828"/>
+</svg>
