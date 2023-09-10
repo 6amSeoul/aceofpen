@@ -185,13 +185,21 @@ $gnb-height: 90px;
 
         .wp-block-search__input {
             padding-left: 20px;
+            font-size: 24px;
+            letter-spacing: -0.2px;
+            font-weight: 300;
             border-radius: 0;
-            border-bottom: 1px solid #474747;
+            border-bottom: 1px solid #444;
         }
 
         &.is_focus .delete-icon {
             right: 64px;
         }
+    }
+
+    // 라이브서치 플러그인
+    .searchwp-live-search-results {
+        margin: 4px 0;
     }
 
     // contents area
@@ -208,14 +216,39 @@ $gnb-height: 90px;
     .content-inner-box {
         border-radius: 0;
 
+        .wp-block-heading {
+            padding-bottom: 28px;
+        }
+
         &:last-child {
             margin-top: 0;
+        }
+    }
+
+    // 무한스크롤 플러그인
+    .qodef-blog-item {
+        margin: 24px 0 0;
+        padding: 22px 19px 8px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        // 겉박스
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                transform: none;
+            }
         }
     }
 
     .qodef-blog-item-inner {
         width: auto;
         padding: 0;
+    }
+
+    .qodef-title {
+        margin: 0;
     }
 
     // 티오씨스타일
@@ -233,6 +266,20 @@ $gnb-height: 90px;
 
     .sidebar-wrap {
         padding-top: 56px;
+    }
+
+    // 쿼리기본(공통) 섬네일목록
+    .wp-block-post-title {
+
+        a {
+            @include ellipsis(5, 1.4em);
+            font-size: 24px;
+        }
+    }
+
+    .wp-block-post-excerpt__excerpt {
+        @include ellipsis(4, 1.6em);
+        font-size: 19px;
     }
 }
 
@@ -278,6 +325,26 @@ $gnb-height: 90px;
         width: 100%;
         padding: 80px 50px;
     }
+
+    // 쿼리기본(공통) 섬네일목록
+    li.wp-block-post {
+        width: 50%;
+    }
+
+    .wp-block-post-title {
+
+        a {
+            @include ellipsis(4, 1.4em);
+            font-size: 24px;
+            letter-spacing: -0.2px;
+        }
+    }
+
+    .wp-block-post-excerpt__excerpt {
+        @include ellipsis(3, 1.6em);
+        font-size: 22px;
+        letter-spacing: -0.2px;
+    }
 }
 
 /* Media Query for Mobile Devices */
@@ -309,7 +376,6 @@ $gnb-height: 90px;
         padding: 20px 27px 20px 27px;
         margin: 64px 4% 170px 4%;
         font-size: 22px;
-
 
         &:before {
             bottom: -122px;

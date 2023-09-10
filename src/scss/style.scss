@@ -16,17 +16,22 @@ License URI:
 @import 'import/sprite_maps';
 @import 'import/sprite_mixin';
 
+// mixin
+@import 'import/mixin';
+
 // 컴포넌트 
-@import 'component/reset.scss';
-@import 'component/layout.scss';
-@import 'component/header.scss';
-@import 'component/aside.scss';
-@import 'component/content.scss';
-@import 'component/single_entry.scss';
-@import 'component/search.scss';
+@import 'component/reset';
+@import 'component/layout';
+@import 'component/header';
+@import 'component/aside';
+@import 'component/content';
+@import 'component/single_entry';
+@import 'component/search';
+@import 'component/search_result';
+@import 'component/category_archive';
 
 // 반응형
-@import 'component/responsive.scss';
+@import 'component/responsive';
 $color-accent-blue: #2288f8;
 
 body,

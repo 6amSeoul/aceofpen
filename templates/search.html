@@ -1,0 +1,43 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"index-page","layout":{"type":"default"}} -->
+<main class="wp-block-group index-page"><!-- wp:template-part {"slug":"search","className":"search-wrap"} /-->
+
+<!-- wp:group {"className":"content-wrap","layout":{"type":"default"}} -->
+<div class="wp-block-group content-wrap"><!-- wp:group {"className":"content-inner-box","layout":{"type":"constrained"}} -->
+<div class="wp-block-group content-inner-box"><!-- wp:query-title {"type":"search","level":2} /-->
+
+<!-- wp:query {"queryId":74,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:post-featured-image {"isLink":true} /-->
+
+<!-- wp:post-title {"isLink":true} /-->
+
+<!-- wp:post-terms {"term":"category"} /-->
+
+<!-- wp:post-excerpt /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination -->
+<!-- wp:query-pagination-previous {"label":"prev page"} /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next {"label":"next page"} /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">no results found</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"placeholder":"Add text or blocks that will display when a query returns no results."} -->
+<p>sorry but nothing matched your search terms! <em>try different keywords</em></p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"aside"} /-->

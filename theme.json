@@ -54,7 +54,7 @@
 			]
 		},
 		"layout": {
-			"contentSize": "760px",
+			"contentSize": "700px",
 			"wideSize": "1000px"
 		},
 		"spacing": {
@@ -145,5 +145,5 @@
 		}
 	],
 	"version": 2,
-	"$schema": "https://schemas.wp.org/wp/6.3/theme.json"
+	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }

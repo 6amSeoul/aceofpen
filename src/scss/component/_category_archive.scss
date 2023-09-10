@@ -1,0 +1,42 @@
+$color-post-body-text: #676767;
+$color-post-title-text: #424242;
+$color-accent-blue: #2288f8;
+$color-light-grey: #bebebe;
+$font-intertight: 'Inter Tight', sans-serif;
+$font-urbanist: 'urbanist', sans-serif;
+
+.wp-block-heading {
+    text-align: center;
+}
+
+.page-heading-box {
+    text-align: center;
+}
+
+.wp-block-query-title {
+    font-family: $font-intertight;
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -0.25px;
+    color: $color-accent-blue;
+    line-height: 1.3;
+    // color: $color-light-grey;
+    text-transform: lowercase;
+}
+
+.wp-block-term-description {
+    margin-top: 12px;
+    font-family: $font-intertight;
+    font-weight: 300;
+    font-size: 22px;
+    color: $color-accent-blue;
+    // color: $color-post-body-text;
+    line-height: 1.6;
+}
+
+.archive {
+
+    .page-heading-box {
+        margin-bottom: 90px;
+    }
+}

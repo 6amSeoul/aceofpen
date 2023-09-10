@@ -1,12 +1,23 @@
 $color-post-body-text: #676767;
+$color-accent-blue: #2288f8;
 $font-intertight: 'Inter Tight', sans-serif;
+$font-urbanist: 'urbanist', sans-serif;
 
-// 무한스크롤 관련
+// 무한스크롤 플러그인
 .qodef-blog-item {
-    padding-top: 52px;
+    padding: 22px 0 8px;
+    margin: 32px 24px;
 
     &:first-child {
-        padding-top: 42px;
+        margin-top: 12px;
+    }
+
+    // 겉박스
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            box-shadow: 0 0 11px 0 #d1fffd;
+            transform: scale(1.04);
+        }
     }
 
     a {
@@ -21,17 +32,17 @@ $font-intertight: 'Inter Tight', sans-serif;
     }
 }
 
+
 .qodef-blog-item-inner {
-    width: 72%;
     margin: 0 auto;
     padding: 0 10px;
 }
 
 .qodef-media-image {
     position: relative;
-    width: 40%;
+    width: 44%;
     /* Set the aspect ratio to 1:1 */
-    padding-top: 40%;
+    padding-top: 44%;
     overflow: hidden;
     margin: 0 auto;
 
@@ -50,6 +61,7 @@ $font-intertight: 'Inter Tight', sans-serif;
 }
 
 .qodef-title {
+    margin: 0 32px;
     font-family: $font-intertight;
     font-weight: 400;
     font-size: 32px;
@@ -95,8 +107,22 @@ $font-intertight: 'Inter Tight', sans-serif;
     }
 }
 
-.ajax-load-more-wrap .alm-btn-wrap {
-    padding: 44px 0;
+.content-wrap .ajax-load-more-wrap.white .alm-btn-wrap {
+    padding: 84px 0;
+
+    button {
+        padding: 18px 11px;
+        font-family: $font-urbanist;
+        font-size: 24px;
+        font-weight: 300;
+        border-color: #eee;
+        color: #444;
+        opacity: 1;
+        line-height: 1;
+        height: auto;
+        box-sizing: border-box;
+        border-radius: 0;
+    }
 }
 
 // 콘텐츠
@@ -105,7 +131,8 @@ $font-intertight: 'Inter Tight', sans-serif;
     display: flex;
     flex-direction: column;
 
-    & .content-inner-box:first-child {
+    // 인덱스 분기
+    &.post-indexing .content-inner-box:first-child {
         text-align: center;
     }
 }
@@ -117,5 +144,20 @@ $font-intertight: 'Inter Tight', sans-serif;
 
     &+& {
         margin-top: 26px;
+    }
+
+    .wp-block-heading {
+        font-family: $font-urbanist;
+        font-weight: 400;
+        color: $color-accent-blue;
+        padding-bottom: 36px;
+    }
+
+    // WPP 헤딩
+    .section-heading {
+        font-size: 24px;
+        letter-spacing: -0.6px;
+        font-weight: 500;
+        padding-bottom: 12px;
     }
 }

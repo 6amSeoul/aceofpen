@@ -97,6 +97,79 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+// 서치 라이브 width 조정
+document.addEventListener("DOMContentLoaded", function () {
+	const inputElement = document.querySelector(".wp-block-search__input");
+
+	if (inputElement) {
+		const observer = new MutationObserver(function (mutationsList) {
+			for (const mutation of mutationsList) {
+				const resultsElement = document.querySelector(".searchwp-live-search-results");
+				const layoutElement = document.querySelector(".index-page");
+
+				if (resultsElement && resultsElement.classList.contains("searchwp-live-search-results-showing")) {
+					const originalWidth = inputElement.offsetWidth;
+					let newWidth;
+
+					// Check the screen width using a media query
+					if (window.innerWidth <= 1200) {
+						// Set a different width when the screen size is less than or equal to 1200px
+						newWidth = `calc(${originalWidth}px)`; // Adjust as needed
+					} else {
+						// Default width for larger screens
+						newWidth = `calc(${originalWidth}px - 90px)`;
+					}
+
+					resultsElement.style.width = newWidth;
+
+					// Disable scrolling within layout element while popup is open
+					if (layoutElement) {
+						layoutElement.style.overflow = "hidden";
+					}
+				} else {
+					// Enable scrolling within layout element when popup is closed
+					if (layoutElement) {
+						layoutElement.style.overflow = "auto";
+					}
+				}
+			}
+		});
+
+		observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+	}
+});
+
+// document.addEventListener("DOMContentLoaded", function () {
+// 	const inputElement = document.querySelector(".wp-block-search__input");
+
+// 	if (inputElement) {
+// 		const observer = new MutationObserver(function (mutationsList) {
+// 			for (const mutation of mutationsList) {
+// 				const resultsElement = document.querySelector(".searchwp-live-search-results");
+// 				const layoutElement = document.querySelector(".index-page");
+
+// 				if (resultsElement && resultsElement.classList.contains("searchwp-live-search-results-showing")) {
+// 					const originalWidth = inputElement.offsetWidth;
+// 					const newWidth = `calc(${originalWidth}px - 90px)`;
+// 					resultsElement.style.width = newWidth;
+
+// 					// Disable scrolling within layout element while popup is open
+// 					if (layoutElement) {
+// 						layoutElement.style.overflow = "hidden";
+// 					}
+// 				} else {
+// 					// Enable scrolling within layout element when popup is closed
+// 					if (layoutElement) {
+// 						layoutElement.style.overflow = "auto";
+// 					}
+// 				}
+// 			}
+// 		});
+
+// 		observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+// 	}
+// });
+
 /*  Aside Rearranging Tag Items
 /* ------------------------------------ */
 document.addEventListener("DOMContentLoaded", function () {

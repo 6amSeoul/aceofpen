@@ -36,14 +36,14 @@ $font-librefranklin: "Libre Franklin", sans-serif;
         border: 1px solid #ececec;
         text-decoration: none;
         color: #7a7a7a;
-        height: 81px;
+        height: 82px;
         vertical-align: top;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 background-color: #fff;
-                border: 1px solid #333333;
-                color: #333333;
+                border: 1px solid #333;
+                color: #333;
             }
         }
     }
@@ -83,7 +83,6 @@ footer {
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 color: #444;
-                // background-color: #d1fffd;
             }
         }
     }

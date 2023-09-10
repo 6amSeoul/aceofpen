@@ -1,0 +1,37 @@
+$color-post-body-text: #676767;
+$color-light-grey: #bebebe;
+$font-urbanist: 'urbanist', sans-serif;
+
+.search {
+
+    .wp-block-query-title {
+        padding: 40px 0 90px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+// 결과없음
+.search-no-results {
+
+    .content-inner-box {
+        display: table;
+        min-height: 70vh;
+
+        &>.wp-block-group {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .wp-block-query-no-results {
+
+        .wp-block-heading {
+            color: $color-light-grey;
+        }
+
+        p {
+            color: $color-post-body-text;
+        }
+    }
+}

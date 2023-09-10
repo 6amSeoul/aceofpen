@@ -16,7 +16,7 @@ $font-emoji: 'Noto Emoji';
     font-weight: 300;
     color: $color-post-body-text;
 
-    .content-inner-box {
+    .content-inner-box:first-child {
         padding-top: 100px;
     }
 
@@ -225,18 +225,17 @@ $font-emoji: 'Noto Emoji';
 
 // 본문글
 .entry-content {
+    margin-top: 44px;
     margin-bottom: 84px;
 
     .wp-block-heading {
+        margin: 50px 0 0;
+        padding-bottom: 0;
         font-family: $font-intertight;
         font-size: 30px;
         font-weight: 400;
-        margin: 50px 0 0;
+        text-align: initial;
         color: $color-post-title-text;
-
-        &:first-child {
-            margin-top: 0;
-        }
     }
 
     p {
@@ -244,7 +243,7 @@ $font-emoji: 'Noto Emoji';
     }
 
     ul {
-        margin-top: 50px;
+        margin-top: 48px;
         padding: 42px 7% 54px;
         background: #fbfbfb;
         box-shadow: 0 0 11px 0 rgba(0, 124, 255, 0.29);
@@ -261,8 +260,9 @@ $font-emoji: 'Noto Emoji';
 
     table {
         font-family: $font-urbanist;
-        font-size: 26px;
+        font-size: 23px;
         font-weight: 500;
+        letter-spacing: -0.1px;
         color: $color-accent-blue;
     }
 }
@@ -282,7 +282,7 @@ $font-emoji: 'Noto Emoji';
         display: block;
         padding: 30px 7% 28px;
         font-family: $font-urbanist;
-        font-size: 28px;
+        font-size: 27px;
         font-weight: 400;
         letter-spacing: 0;
         line-height: 1.6;
@@ -306,7 +306,7 @@ $font-emoji: 'Noto Emoji';
             word-wrap: break-word;
             font-family: $font-urbanist;
             font-size: 26px;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.4;
             letter-spacing: -0.2px;
             color: $color-accent-blue;
@@ -328,31 +328,34 @@ $font-emoji: 'Noto Emoji';
 }
 
 // 인스타/트위터 임베드
-.instagram-media-rendered {
-    margin: 40px auto !important;
-    // padding: 6px !important;
-    width: 70% !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-}
+// .instagram-media-rendered {
+//     margin: 40px auto !important;
+//     // padding: 6px !important;
+//     width: 70% !important;
+//     border-radius: 16px !important;
+//     overflow: hidden !important;
+//     box-sizing: border-box !important;
+// }
 
-.twitter-tweet-rendered {
-    margin: 40px auto !important;
-    width: 70% !important;
-}
+// .twitter-tweet-rendered {
+//     margin: 40px auto !important;
+//     width: 70% !important;
+// }
 
 // 네비게이션
 .page-navigation-box {
-    padding: 12px 32px;
+    padding: 34px 32px;
+}
+
+.wp-block-post-navigation-link {
+    width: 50%;
 
     a {
-        display: inline-block;
-        padding: 4px 0;
-        font-size: 19px;
+        padding: 5px 4px;
+        font-size: 21px;
         font-weight: 300;
         text-decoration: none;
-        color: #b4b4b4;
+        color: $color-post-body-text;
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
@@ -361,4 +364,47 @@ $font-emoji: 'Noto Emoji';
             }
         }
     }
+}
+
+.post-navigation-link-next {
+    float: right;
+    text-align: center;
+}
+
+.post-navigation-link-previous {
+    float: left;
+    text-align: center;
+}
+
+// yarpp 플러그인
+.yarpp-related {
+    margin-top: 110px;
+
+    h3 {
+        padding-bottom: 10px;
+        font-family: $font-intertight;
+        font-size: 26px;
+        font-weight: 400;
+        color: #444;
+    }
+
+    ol {
+        padding-left: 24px;
+
+        a {
+            font-size: 25px;
+            font-weight: 300;
+            color: #4a4a4a;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: #d1fffd;
+                }
+            }
+        }
+    }
+}
+
+.yarpp-related-none {
+    display: none;
 }

@@ -1,3 +1,6 @@
+$color-post-body-text: #676767;
+$color-light-grey: #bebebe;
+$color-accent-blue: #2288f8;
 $font-intertight: 'Inter Tight', sans-serif;
 
 body>.wp-site-blocks {
@@ -28,4 +31,158 @@ header.wp-block-template-part {
     padding-top: 24px;
     width: 100%;
     overflow: scroll;
+}
+
+.error404 {
+
+    .content-inner-box {
+        display: table;
+        min-height: 70vh;
+
+        &>.wp-block-group {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+// 쿼리기본(공통) 섬네일목록
+.archive,
+.search {
+    ul.wp-block-post-template {
+        overflow: hidden;
+        margin-right: -16px;
+    }
+
+    li.wp-block-post {
+        padding: 0 16px 50px 0;
+        width: 33.33%;
+        float: left;
+    }
+
+    .wp-block-post-featured-image {
+        position: relative;
+        width: 100%;
+        /* Set the aspect ratio to 1:1 */
+        padding-top: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+
+        a {
+            display: block;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+    }
+
+    .wp-block-post-title {
+        padding: 22px 0 13px;
+
+        a {
+            font-family: $font-intertight;
+            font-weight: 300;
+            font-size: 26px;
+            color: #4b4b4b;
+            text-decoration: none;
+            @include ellipsis(4, 1.3em);
+        }
+    }
+
+    .wp-block-post-excerpt {
+        padding-bottom: 15px;
+    }
+
+    .wp-block-post-excerpt__excerpt {
+        color: $color-post-body-text;
+        font-weight: 300;
+        @include ellipsis(3, 1.5em);
+    }
+
+    // 카데고리 : 서치 결과
+    .taxonomy-category {
+        margin-bottom: 13px;
+        font-family: $font-intertight;
+        font-size: 22px;
+        letter-spacing: -0.25px;
+        font-weight: 300;
+        line-height: 1.4;
+
+        a {
+            color: #d0d0d0;
+            text-decoration: none;
+            word-break: break-word;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: #474747;
+                }
+            }
+        }
+    }
+
+    // 태그 : 카데고리아카이브
+    .taxonomy-post_tag {
+        font-family: $font-intertight;
+        font-size: 19px;
+        font-weight: 300;
+        line-height: 1.4;
+        color: #cfcfcf;
+        text-transform: lowercase;
+
+        a {
+            text-decoration: none;
+            color: #cfcfcf;
+        }
+    }
+
+    // pagination 
+    .wp-block-query-pagination {
+        a {
+            display: inline-block;
+            padding: 4px;
+            font-size: 21px;
+            font-weight: 300;
+            line-height: 1;
+            text-decoration: none;
+            color: $color-post-body-text;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: #444;
+                    background-color: #d1fffd;
+                }
+            }
+        }
+
+        .wp-block-query-pagination-next,
+        .wp-block-query-pagination-previous {
+            color: $color-light-grey;
+            letter-spacing: -0.25px;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: #313131;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .page-numbers.current {
+            // font-weight: 400;
+            color: $color-accent-blue;
+        }
+
+        .page-numbers.dots {
+            font-weight: 300;
+            color: $color-light-grey;
+        }
+    }
 }
