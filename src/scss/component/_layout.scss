@@ -1,4 +1,5 @@
 $color-post-body-text: #676767;
+$color-post-title-text: #424242;
 $color-light-grey: #bebebe;
 $color-accent-blue: #2288f8;
 $font-intertight: 'Inter Tight', sans-serif;
@@ -34,7 +35,6 @@ header.wp-block-template-part {
 }
 
 .error404 {
-
     .content-inner-box {
         display: table;
         min-height: 70vh;
@@ -42,6 +42,18 @@ header.wp-block-template-part {
         &>.wp-block-group {
             display: table-cell;
             vertical-align: middle;
+        }
+    }
+}
+
+
+// ** 마지막 작업 파악중 아래 코드는 뭐지 **
+// 랜딩 메인 아티클목록
+.ajax-load-more-wrap {
+    .alm-item {
+        h3 a {
+            text-decoration: none;
+            color: #333333;
         }
     }
 }
@@ -63,7 +75,7 @@ header.wp-block-template-part {
     .wp-block-post-featured-image {
         position: relative;
         width: 100%;
-        /* Set the aspect ratio to 1:1 */
+        // Set the aspect ratio to 1:1
         padding-top: 100%;
         overflow: hidden;
         margin: 0 auto;
@@ -185,4 +197,11 @@ header.wp-block-template-part {
             color: $color-light-grey;
         }
     }
+}
+
+// popular posts 로딩 아이콘 숨김
+.wpp-widget-placeholder,
+.wpp-widget-block-placeholder,
+.wpp-shortcode-placeholder {
+    visibility: hidden;
 }

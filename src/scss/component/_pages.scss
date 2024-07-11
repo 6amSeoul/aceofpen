@@ -1,0 +1,84 @@
+$font-intertight: 'Inter Tight', sans-serif;
+$color-post-title-text: #424242;
+
+// page 공통
+.page {
+    .single-entry .content-inner-box:first-child {
+        padding: 100px 32px 90px;
+    }
+}
+
+// page 분기
+// This Article Has Chosen You : page-id-3334
+.page-id-3334 {
+    .content-inner-box:first-child .wp-block-post-title {
+        font-size: 31px;
+        font-weight: 300;
+        color: #d2d2d2;
+    }
+}
+
+.notify-box {
+    padding-bottom: 90px;
+    font-family: $font-intertight;
+    font-weight: 300;
+    font-size: 31px;
+    letter-spacing: -0.1px;
+    line-height: 1.2;
+    color: #d2d2d2;
+
+    p {
+        margin-top: 0;
+    }
+
+    &+h2 {
+        padding-bottom: 24px;
+        font-family: $font-intertight;
+        font-weight: 500;
+        font-size: 36px;
+        letter-spacing: -0.05px;
+        line-height: 1.2;
+        color: $color-post-title-text;
+    }
+}
+
+// We Met For A Reason : page-id-3618
+.page-id-3618 {
+    .entry-content ul {
+        margin-top: 48px;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+
+        a {
+            display: inline-block;
+            font-family: $font-intertight;
+            font-weight: 300;
+            font-size: 26px;
+            text-decoration: none;
+            line-height: 1.25;
+            padding: 4px 0;
+            color: #555;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: #d1fffd;
+                    color: #444;
+                }
+            }
+        }
+    }
+
+    .entry-content ul li~li {
+        margin-top: 19px;
+    }
+
+    .content-inner-box:first-child .wp-block-post-title {
+        font-weight: 300;
+    }
+
+    .single-entry .wp-block-post-title+.entry-content {
+        margin-top: 66px;
+    }
+}

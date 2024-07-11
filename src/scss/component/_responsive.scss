@@ -176,7 +176,7 @@ $gnb-height: 90px;
     }
 
     .search-wrap {
-        padding: 46px 53px 36px;
+        padding: 46px 53px 0;
         background: #fff;
 
         .search-button {
@@ -388,5 +388,26 @@ $gnb-height: 90px;
 
     .sidebar-wrap {
         padding: 70px 24px;
+    }
+
+    // page 공통
+    .page {
+        .single-entry .content-inner-box:first-child {
+            padding: 84px 24px 60px;
+        }
+    }
+
+    // this article has chosen you
+    .page-id-3972,
+    //개발
+    .page-id-3334 {
+        .content-inner-box:first-child .wp-block-post-title {
+            font-size: 24px;
+        }
+    }
+
+    .notify-box {
+        padding-bottom: 114px;
+        font-size: 24px;
     }
 }

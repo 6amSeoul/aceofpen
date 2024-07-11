@@ -3,7 +3,7 @@ Theme Name: Ace of Pen
 Text Domain: aceofpen
 Theme URI:
 Requires PHP: 5.7
-Description: The 2023 custom WP theme.
+Description: Trust the process. Act on it. 34
 Author: Pen
 Author URI:
 Version: 0.0.1
@@ -29,6 +29,10 @@ License URI:
 @import 'component/search';
 @import 'component/search_result';
 @import 'component/category_archive';
+@import 'component/pages';
+
+// 유틸 페이지
+// @import 'component/find_manseryuk';
 
 // 반응형
 @import 'component/responsive';

@@ -1,5 +1,4 @@
 "use strict";
-
 // node modules
 const gulp = require("gulp");
 const fs = require("fs");
@@ -9,14 +8,14 @@ const del = require("del");
 
 // gulp modules
 const sass = require("gulp-sass")(require("sass"));
-const postcss = require("gulp-postcss");
+const postcss = require("gulp-postcss"); // url 리베이스
 const handlebars = require("gulp-compile-handlebars");
 const rename = require("gulp-rename");
 const spritesmith = require("gulp.spritesmith");
 const md5 = require("gulp-md5-plus");
 const gulpif = require("gulp-if");
 const plumber = require("gulp-plumber");
-const cleanCSS = require("gulp-clean-css");
+const cssnano = require("gulp-cssnano"); // css 미니파이
 const gulpSort = require("gulp-sort");
 
 // notification
@@ -158,7 +157,7 @@ function devSass() {
 	return gulp
 		.src(path.join(paths.css_src, "**/*.scss"), { sourcemaps: true })
 		.pipe(plumber(globalOptions.notify))
-		.pipe(sass().on("error", sass.logError))
+		.pipe(sass({ sourcemap: false }).on("error", sass.logError)) // sourcemap: false 설정으로 주석 유지
 		.pipe(gulp.dest(paths.css_dest, { sourcemaps: "." }))
 		.pipe(gulpif(config.browserSync, browserSync.stream({ match: "**/*.css" })));
 }
@@ -169,40 +168,57 @@ function buildSass() {
 
 		gulpPipe = sassPipe(gulpPipe, true);
 
+		// Use postcss and discardComments to remove comments
 		gulpPipe
 			.pipe(gulp.dest(paths.css_dest))
-			.pipe(gulpif(config.urlRebase, postcss([urlRebase(config.urlRebaseOption)]))) // Apply urlRebase function if config.urlRebase is true
+			.pipe(gulpif(config.urlRebase, postcss([urlRebase(config.urlRebaseOption)])))
+			.pipe(gulp.dest(paths.css_dest))
+			.pipe(cssnano()) // Use gulp-cssnano to minify the CSS
+			.on("end", resolve);
+	});
+}
+
+function buildSass() {
+	return new Promise(function (resolve) {
+		let gulpPipe = gulp.src(path.join(paths.css_src, "**/*.scss")).pipe(plumber(globalOptions.notify));
+
+		gulpPipe = sassPipe(gulpPipe, true);
+
+		gulpPipe
+			.pipe(gulp.dest(paths.css_dest))
+			.pipe(gulpif(config.urlRebase, postcss([urlRebase(config.urlRebaseOption)])))
 			.pipe(gulp.dest(paths.css_dest))
 			.on("end", resolve);
 	});
 }
 
-// function cssMinify() {
-// 	var options = {
-// 		cleanCSS: {
-// 			advanced: false, // 속성 병합 false
-// 			aggressiveMerging: false, // 속성 병합 false
-// 			restructuring: false, // 선택자의 순서 변경 false
-// 			mediaMerging: false, // media query 병합 false
-// 		},
-// 	};
-// 	return gulp.src(path.join(paths.css_dest, "*.css")).pipe(cleanCSS(options.cleanCSS)).pipe(gulp.dest(paths.css_dest));
-// }
-
 function cssMinify() {
 	var options = {
-		cleanCSS: {
-			advanced: false,
-			aggressiveMerging: false,
-			restructuring: false,
-			mediaMerging: false,
+		cssnano: {
+			safe: true,
+			discardComments: false, // 주석 제거를 비활성화합니다
 		},
+		outputStyle: "expanded",
 	};
 
 	if (isBuildTask()) {
-		return gulp.src(path.join(paths.css_dest, "*.css")).pipe(cleanCSS(options.cleanCSS)).pipe(gulp.dest("./")); // Output in the root folder for the 'build' task
+		return gulp
+			.src(path.join(paths.css_dest, "*.css"))
+			.pipe(cssnano(options.cssnano))
+			.on("data", function (file) {
+				// Log the contents of the file before and after minification
+				console.log("Before minification:", file.contents.toString());
+			})
+			.pipe(gulp.dest("./"));
 	} else {
-		return gulp.src(path.join(paths.css_dest, "*.css")).pipe(cleanCSS(options.cleanCSS)).pipe(gulp.dest(paths.css_dest)); // Output in src/css/ folder for the default 'dev' task
+		return gulp
+			.src(path.join(paths.css_dest, "*.css"))
+			.pipe(cssnano(options.cssnano))
+			.on("data", function (file) {
+				// Log the contents of the file before and after minification
+				console.log("Before minification:", file.contents.toString());
+			})
+			.pipe(gulp.dest(paths.css_dest));
 	}
 }
 

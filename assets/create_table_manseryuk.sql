@@ -1,0 +1,38 @@
+-- 만세력 MySQL DB 자료
+-- 본 자료는 1900년 1월 1일 부터 2100년 12월 31일 까지의 만세력 정보를 MySQL DB로 제작한것입니다. 만든이: 울보천사 (cry1004@mirckorea.net)
+
+CREATE TABLE wpol_calenda_data (
+  cd_no mediumint(5) unsigned NOT NULL auto_increment,
+  cd_sgi smallint(4) NOT NULL default '0',
+  cd_sy smallint(4) unsigned NOT NULL default '0',
+  cd_sm enum('1','2','3','4','5','6','7','8','9','10','11','12') NOT NULL default '1',
+  cd_sd enum('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31') NOT NULL default '1',
+  cd_ly smallint(4) unsigned NOT NULL default '0',
+  cd_lm enum('1','2','3','4','5','6','7','8','9','10','11','12') NOT NULL default '1',
+  cd_ld enum('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30') NOT NULL default '1',
+  cd_hyganjee varchar(6) default NULL,
+  cd_kyganjee varchar(6) default NULL,
+  cd_hmganjee varchar(6) default NULL,
+  cd_kmganjee varchar(6) default NULL,
+  cd_hdganjee varchar(6) default NULL,
+  cd_kdganjee varchar(6) default NULL,
+  cd_hweek char(3) default NULL,
+  cd_kweek char(3) default NULL,
+  cd_stars char(3) default NULL,
+  cd_moon_state char(3) default NULL,
+  cd_moon_time varchar(12) default NULL,
+  cd_leap_month int(1) default '0',
+  cd_month_size int(1) default '0',
+  cd_hterms varchar(6) default NULL,
+  cd_kterms varchar(6) default NULL,
+  cd_terms_time varchar(12) default NULL,
+  cd_keventday varchar(6) default NULL,
+  cd_ddi enum('쥐','소','호랑이','토끼','용','뱀','말','양','원숭이','닭','개','돼지') NOT NULL default '쥐',
+  cd_sol_plan varchar(50) default NULL,
+  cd_lun_plan varchar(50) default NULL,
+  holiday int(1) NOT NULL default '0',
+  PRIMARY KEY  (cd_no),
+  KEY cd_sy (cd_sy),
+  KEY cd_sm (cd_sm),
+  KEY cd_sd (cd_sd)
+) 

@@ -13,25 +13,24 @@ $font-urbanist: 'urbanist', sans-serif;
     }
 
     // 겉박스
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            box-shadow: 0 0 11px 0 #d1fffd;
-            transform: scale(1.04);
-        }
-    }
+    // @media (hover: hover) and (pointer: fine) {
+    //     &:hover {
+    //         box-shadow: 0 0 11px 0 #d1fffd;
+    //         transform: scale(1.04);
+    //     }
+    // }
 
     a {
         text-decoration: none;
         display: block;
 
-        @media (hover: hover) and (pointer: fine) {
-            &:hover .qodef-title {
-                background-color: #d1fffd;
-            }
-        }
+        // @media (hover: hover) and (pointer: fine) {
+        //     &:hover .qodef-title {
+        //         background-color: #d1fffd;
+        //     }
+        // }
     }
 }
-
 
 .qodef-blog-item-inner {
     margin: 0 auto;
@@ -41,7 +40,7 @@ $font-urbanist: 'urbanist', sans-serif;
 .qodef-media-image {
     position: relative;
     width: 44%;
-    /* Set the aspect ratio to 1:1 */
+    // Set the aspect ratio to 1:1
     padding-top: 44%;
     overflow: hidden;
     margin: 0 auto;
@@ -116,7 +115,7 @@ $font-urbanist: 'urbanist', sans-serif;
         font-size: 24px;
         font-weight: 300;
         border-color: #eee;
-        color: #444;
+        color: #d2d2d2;
         opacity: 1;
         line-height: 1;
         height: auto;
@@ -132,7 +131,7 @@ $font-urbanist: 'urbanist', sans-serif;
     flex-direction: column;
 
     // 인덱스 분기
-    &.post-indexing .content-inner-box:first-child {
+    &.post-listing .content-inner-box:first-child {
         text-align: center;
     }
 }

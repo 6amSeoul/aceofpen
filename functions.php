@@ -22,6 +22,7 @@ function aceofpen_theme_scripts()
 
 add_action('wp_enqueue_scripts', 'aceofpen_theme_scripts');
 
+/* popular posts */
 /**
  * Make popular posts links red in 'cards-compact' theme.
  *
@@ -60,6 +61,9 @@ function wpp_additional_css_rules($additional_styles, $theme_name)
         .wpp-cards-compact li .wpp-post-title:hover {
             color: #2288f8;
             text-decoration: none;
+        }
+        .wpp_def_no_src {
+            display: none !important;
         }';
     }
     return $additional_styles;

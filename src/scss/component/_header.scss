@@ -109,3 +109,20 @@ header.wp-block-template-part {
     }
   }
 }
+
+// ** 일단 임시로 홈 메뉴클릭 안되게해놓기
+.home-menu-box {
+  ul li:not(:first-child) {
+
+    .home-menu-item {
+      color: #b4b4b4;
+      cursor: default;
+
+      &:hover {
+        font-weight: 100;
+        color: #b4b4b4;
+        transform: none;
+      }
+    }
+  }
+}

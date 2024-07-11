@@ -32,6 +32,10 @@ $font-emoji: 'Noto Emoji';
             text-decoration: none;
             color: $color-post-title-text;
         }
+
+        &+.entry-content {
+            margin-top: 44px;
+        }
     }
 
     // 태그(링크)
@@ -225,7 +229,6 @@ $font-emoji: 'Noto Emoji';
 
 // 본문글
 .entry-content {
-    margin-top: 44px;
     margin-bottom: 84px;
 
     .wp-block-heading {
@@ -239,7 +242,7 @@ $font-emoji: 'Noto Emoji';
     }
 
     p {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     ul {
@@ -326,21 +329,6 @@ $font-emoji: 'Noto Emoji';
         }
     }
 }
-
-// 인스타/트위터 임베드
-// .instagram-media-rendered {
-//     margin: 40px auto !important;
-//     // padding: 6px !important;
-//     width: 70% !important;
-//     border-radius: 16px !important;
-//     overflow: hidden !important;
-//     box-sizing: border-box !important;
-// }
-
-// .twitter-tweet-rendered {
-//     margin: 40px auto !important;
-//     width: 70% !important;
-// }
 
 // 네비게이션
 .page-navigation-box {
