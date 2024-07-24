@@ -34,6 +34,9 @@ header.wp-block-template-part {
     overflow: scroll;
 }
 
+
+
+// ** 4 04 페이지 있는건가 ??
 .error404 {
     .content-inner-box {
         display: table;
@@ -46,77 +49,55 @@ header.wp-block-template-part {
     }
 }
 
-
-// ** 마지막 작업 파악중 아래 코드는 뭐지 **
-// 랜딩 메인 아티클목록
-.ajax-load-more-wrap {
-    .alm-item {
-        h3 a {
-            text-decoration: none;
-            color: #333333;
-        }
-    }
-}
-
-// 쿼리기본(공통) 섬네일목록
+// 아카이브/서치 결과 섬네일목록 화면
 .archive,
 .search {
-    ul.wp-block-post-template {
-        overflow: hidden;
-        margin-right: -16px;
-    }
 
-    li.wp-block-post {
-        padding: 0 16px 50px 0;
-        width: 33.33%;
-        float: left;
-    }
+    // .wp-block-post-featured-image {
+    //     position: relative;
+    //     width: 100%;
+    //     // Set the aspect ratio to 1:1
+    //     padding-top: 100%;
+    //     overflow: hidden;
+    //     margin: 0 auto;
 
-    .wp-block-post-featured-image {
-        position: relative;
-        width: 100%;
-        // Set the aspect ratio to 1:1
-        padding-top: 100%;
-        overflow: hidden;
-        margin: 0 auto;
+    //     a {
+    //         display: block;
+    //     }
 
-        a {
-            display: block;
-        }
+    //     img {
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         box-sizing: border-box;
+    //         object-fit: cover;
+    //     }
+    // }
 
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-            object-fit: cover;
-        }
-    }
+    // .wp-block-post-title {
+    //     padding: 22px 0 13px;
 
-    .wp-block-post-title {
-        padding: 22px 0 13px;
+    //     a {
+    //         font-family: $font-intertight;
+    //         font-weight: 300;
+    //         font-size: 26px;
+    //         color: #4b4b4b;
+    //         text-decoration: none;
+    //         @include ellipsis(4, 1.3em);
+    //     }
+    // }
 
-        a {
-            font-family: $font-intertight;
-            font-weight: 300;
-            font-size: 26px;
-            color: #4b4b4b;
-            text-decoration: none;
-            @include ellipsis(4, 1.3em);
-        }
-    }
+    // .wp-block-post-excerpt {
+    //     padding-bottom: 15px;
+    // }
 
-    .wp-block-post-excerpt {
-        padding-bottom: 15px;
-    }
-
-    .wp-block-post-excerpt__excerpt {
-        color: $color-post-body-text;
-        font-weight: 300;
-        @include ellipsis(3, 1.5em);
-    }
+    // .wp-block-post-excerpt__excerpt {
+    //     color: $color-post-body-text;
+    //     font-weight: 300;
+    //     @include ellipsis(3, 1.5em);
+    // }
 
     // 카데고리 : 서치 결과
     .taxonomy-category {

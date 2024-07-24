@@ -241,6 +241,11 @@ $font-emoji: 'Noto Emoji';
         color: $color-post-title-text;
     }
 
+    strong {
+        font-weight: 400;
+        padding: 0 3px;
+    }
+
     p {
         margin-top: 50px;
     }
@@ -255,6 +260,10 @@ $font-emoji: 'Noto Emoji';
         li~li {
             margin-top: 13px;
         }
+    }
+
+    ol {
+        padding: 40px 7% 18px;
     }
 
     .wp-block-table {
@@ -395,4 +404,11 @@ $font-emoji: 'Noto Emoji';
 
 .yarpp-related-none {
     display: none;
+}
+
+
+.wp-block-list {
+    li {
+        margin-top: 50px;
+    }
 }

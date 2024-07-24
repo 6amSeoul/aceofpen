@@ -103,67 +103,68 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
+// ** 안되서 일단 searchwp 플러그인 디스에이블
 // 라이브서치 플러그인
 // 래퍼
-.searchwp-live-search-results {
-    margin: 4px 45px;
-    font-family: $font-intertight;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 1.6;
-    letter-spacing: -0.25px;
-    text-transform: lowercase;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: $color-light-grey;
-    background: #fff;
-    box-shadow: 0 0 11px 0 #d1fffd;
-    border: 3px solid #d1fffd;
+// .searchwp-live-search-results {
+//     margin: 4px 45px;
+//     font-family: $font-intertight;
+//     font-size: 24px;
+//     font-weight: 300;
+//     line-height: 1.6;
+//     letter-spacing: -0.25px;
+//     text-transform: lowercase;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+//     color: $color-light-grey;
+//     background: #fff;
+//     box-shadow: 0 0 11px 0 #d1fffd;
+//     border: 3px solid #d1fffd;
 
-    .spinner {
-        display: none;
-    }
+//     .spinner {
+//         display: none;
+//     }
 
-    &.searchwp-live-search-no-min-chars:after {
-        font-size: 22px;
-        padding: 50% 0 50%;
-    }
+//     &.searchwp-live-search-no-min-chars:after {
+//         font-size: 22px;
+//         padding-top: 3em;
+//     }
 
-    .searchwp-live-search-no-results {
-        font-size: 22px;
-        padding: 50% 0 50%;
+//     .searchwp-live-search-no-results {
+//         font-size: 22px;
+//         padding: 50% 0 50%;
 
-        em {
-            font-style: normal;
-        }
-    }
-}
+//         em {
+//             font-style: normal;
+//         }
+//     }
+// }
 
 // 결과 한칸
-.searchwp-live-search-result {
-    a {
-        padding: 36px 40px;
-        display: block;
-        font-family: $font-intertight;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 1.6;
-        color: #444;
-        text-decoration: none;
-        text-transform: none;
-        cursor: pointer;
-        box-sizing: border-box;
-        border: 3px solid #fff;
+// .searchwp-live-search-result {
+//     a {
+//         padding: 36px 40px;
+//         display: block;
+//         font-family: $font-intertight;
+//         font-size: 24px;
+//         font-weight: 400;
+//         line-height: 1.6;
+//         color: #444;
+//         text-decoration: none;
+//         text-transform: none;
+//         cursor: pointer;
+//         box-sizing: border-box;
+//         border: 3px solid #fff;
 
-        @media (hover: hover) and (pointer: fine) {
-            &:hover {
-                color: #313131;
-                background-color: #f4f4f4;
-            }
-        }
-    }
+//         @media (hover: hover) and (pointer: fine) {
+//             &:hover {
+//                 color: #313131;
+//                 background-color: #f4f4f4;
+//             }
+//         }
+//     }
 
-    &+& {
-        border-top: 1px solid #f0f0f0;
-    }
-}
+//     &+& {
+//         border-top: 1px solid #f0f0f0;
+//     }
+// }

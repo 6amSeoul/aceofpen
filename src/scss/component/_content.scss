@@ -106,23 +106,68 @@ $font-urbanist: 'urbanist', sans-serif;
     }
 }
 
-.content-wrap .ajax-load-more-wrap.white .alm-btn-wrap {
-    padding: 84px 0;
 
-    button {
-        padding: 18px 11px;
-        font-family: $font-urbanist;
-        font-size: 24px;
-        font-weight: 300;
-        border-color: #eee;
-        color: #d2d2d2;
-        opacity: 1;
+
+// Ajax Load More 플러그인 : 포스트리스트
+.post-listing {
+    a {
+        text-decoration: none;
+        color: $color-post-title-text;
+        display: inline-block;
+        padding: 14px 11px;
+
+        &:hover {
+            color: $color-accent-blue;
+        }
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 28px;
         line-height: 1;
-        height: auto;
-        box-sizing: border-box;
-        border-radius: 0;
+    }
+
+    //날짜
+    .entry-meta {
+        // margin-top: 21px;
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 23px;
+        text-align: left;
+        font-weight: 400;
+        margin: 32px 0;
+    }
+
+
+    li::marker {
+        content: none;
+    }
+
+    .alm-btn-wrap {
+        padding: 84px 0;
+
+        button {
+            padding: 17px 18px;
+            font-family: $font-urbanist;
+            font-size: 22px;
+            font-weight: 300;
+            color: #2d2d2d;
+            border: none;
+            background: transparent;
+
+            &:disabled,
+            &[disabled] {
+                color: #6f6f6f;
+            }
+        }
     }
 }
+
+
+
+
 
 // 콘텐츠
 .content-wrap {
